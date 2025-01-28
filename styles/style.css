@@ -1,5 +1,362 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: var(--bg-color);
+  color: var(--main-text-color);
+  block-size: 100vh;
+}
+
+.header {
+  display: grid;
+  position: relative;
+  grid-template-rows: 1fr auto 1fr;
+  padding: 20px;
+  block-size: 100vh;
+  min-block-size: 668px;
+}
+
+.decor {
+  color: var(--accent-color);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
+.decor::before {
+  content: 'rec';
+}
+
+.decor::after {
+  content: '';
+  display: block;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 10px;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.header__theme-menu-button {
+  color: var(--button-color);
+  padding: 0.5px 13px;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  outline: 1px solid transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--button-color);
+  pointer-events: none;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--button-hover-border);
+}
+
+.decorated-zone::after,
+.decorated-zone::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 1px solid var(--button-color);
+  width: 25px;
+  height: 25px;
+}
+
+.decorated-zone::after {
+  border-top: none;
+  border-right: none;
+  left: 20px;
+  bottom: 20px;
+}
+
+.decorated-zone::before {
+  border-left: none;
+  border-bottom: none;
+  right: 20px;
+  top: 20px;
+}
+
+.header__theme-menu {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 11.5px;
+}
+
+.header__theme-menu-button:focus,
+a:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--button-color);
+}
+
+a:hover {
+  border-bottom: 1px solid var(--main-text-color);
+}
+
+a:focus-visible {
+  outline: 1px solid var(--main-text-color);
+}
+
+.main__title {
+  color: var(--main-heading-color);
+  font-family: inherit;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 82.5%;
+  font-style: inherit;
+  font-weight: bold;
+  margin-inline-start: -20px;
+}
+
+.header__subtitle {
+  color: var(--heading-color);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-style: inherit;
+  font-weight: bold;
+  max-inline-size: 491px;
+  justify-self: flex-end;
+  align-self: center;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 60px 20px;
+}
+
+.section-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.section__main-title {
+  color: var(--button-color);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-style: inherit;
+}
+
+.article__subtitle {
+  color: var(--heading-color);
+  margin-block-end: 10px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-style: inherit;
+}
+
+.subtitle {
+  color: var(--heading-color);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-style: inherit;
+}
+
+.section__listing {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-what__listing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.article__heading {
+  font-weight: normal;
+  color: var(--heading-color);
+  margin-block-end: 10px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-style: inherit;
+}
+
+.images-layout {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, minmax(min-content, max-content));
+  margin-block-start: 20px;
+}
+
+.images-layout__item:nth-child(1) {
+  grid-column: span 2;
+}
+
+.images-layout__item:nth-child(2) {
+  grid-row: span 2;
+}
+
+.images-layout__item:nth-child(3) {
+  grid-row: span 2;
+}
+
+.images-layout__item:nth-child(4) {
+  grid-row: span 1;
+  grid-column: span 1;
+}
+
+.images-layout__item:nth-child(5) {
+  grid-column: span 2;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  block-size: 100%;
+  inline-size: 100%;
+  display: block;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 100vh;
+  position: relative;
+  padding: 20px;
+  min-block-size: 668px;
+}
+
+.footer-main__title {
+  color: var(--main-heading-color);
+  font-family: inherit;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  line-height: 82.5%;
+  font-style: inherit;
+  font-weight: bold;
+}
+
+.add-margin {
+  margin-block-end: 20px;
+}
+
+@media (width <= 375px) {
+  .header {
+    padding: 10px;
+  }
+
+  .decor {
+    right: 20px;
+    top: 10px;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+
+  .decorated-zone::after {
+    border-top: none;
+    border-right: none;
+    left: 10px;
+    bottom: 10px;
+  }
+  
+  .decorated-zone::before {
+    border-left: none;
+    border-bottom: none;
+    right: 10px;
+    top: 10px;
+  }
+
+  .main__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
+  .header__subtitle {
+    max-inline-size: 355px;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 40px 10px;
+  }
+
+  .section-layout {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (width <= 768px) {
+  .header__theme-menu {
+    justify-content: end;
+    align-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+
+  .header__subtitle {
+    max-inline-size: 364px;
+  }
+
+  .section-what__listing {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
+@media (width < 768px) {
+  .main__title {
+    margin-inline-start: 0;
+  }
+
+  .images-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-block-start: 5px;
+  }
+}
+
+@media (width <= 1024px) {
+  .section__main-title {
+    max-inline-size: 315px;
+  }
+}
+
+@media (375px < width <= 768px) {
+  .section__main-title {
+    max-inline-size: 236px;
+  }
 }
