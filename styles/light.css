@@ -15,10 +15,10 @@
   --button-hover-border: rgb(50, 49, 45, 0.4);
 }
 
-.theme-light .page {
-  background-color: var(--bg-color);
-  color: var(--main-text-color);
+.theme-light .decor {
+  display: none;
 }
+
 
 @media (prefers-color-scheme: light) {
 

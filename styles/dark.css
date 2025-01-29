@@ -15,9 +15,5 @@
   --bg-image: url(../images/cover-image-dark.png);
 }
 
-.theme-dark .page {
-  background-color: var(--bg-color);
-  color: var(--main-text-color);
-}
 
 
