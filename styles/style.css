@@ -262,15 +262,16 @@ a:focus-visible {
   .section__main-title {
     max-inline-size: 315px;
   }
-  
+
   .section-what__listing {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
+
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .header__theme-menu {
     justify-content: end;
     align-self: center;
