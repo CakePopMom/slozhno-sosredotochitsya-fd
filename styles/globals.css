@@ -50,3 +50,11 @@ a {
 a {
   text-shadow: 2px 2px 0 var(--accent-color);
 }
+
+article p {
+  margin-bottom: 20px;
+}
+
+article p:last-child {
+  margin-bottom: 0;
+}
