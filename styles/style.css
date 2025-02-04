@@ -258,60 +258,19 @@ a:focus-visible {
   font-weight: bold;
 }
 
-@media (375px <= width <= 768px) {
+@media (max-width: 1024px) {
   .section__main-title {
-    max-inline-size: 236px;
+    max-inline-size: 315px;
   }
   
-  .header {
-    padding: 10px;
-  }
-
-  .decor {
-    right: 20px;
-    top: 10px;
-  }
-
-  .footer {
-    padding: 10px;
-  }
-
-  .decorated-zone::after {
-    border-top: none;
-    border-right: none;
-    left: 10px;
-    bottom: 10px;
-  }
-  
-  .decorated-zone::before {
-    border-left: none;
-    border-bottom: none;
-    right: 10px;
-    top: 10px;
-  }
-
-  .main__title {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  }
-
-  .header__subtitle {
-    max-inline-size: 355px;
-  }
-
-  .main {
+  .section-what__listing {
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    padding: 40px 10px;
-  }
-
-  .section-layout {
-    display: flex;
-    flex-direction: column;
+    gap: 20px;
   }
 }
 
-@media (width <= 768px) {
+@media (max-width: 768px) {
   .header__theme-menu {
     justify-content: end;
     align-self: center;
@@ -330,10 +289,7 @@ a:focus-visible {
     flex-direction: column;
     gap: 20px;
   }
-}
 
-
-@media (width < 768px) {
   .main__title {
     margin-inline-start: 0;
   }
@@ -344,17 +300,48 @@ a:focus-visible {
     gap: 10px;
     margin-block-start: 5px;
   }
+
 }
 
-@media (width <= 1024px) {
-  .section__main-title {
-    max-inline-size: 315px;
+@media (max-width: 668px) {
+  .header {
+    padding: 10px;
   }
-}
 
-@media (375px < width <= 768px) {
-  .section__main-title {
-    max-inline-size: 236px;
+  .decor {
+    right: 20px;
+    top: 10px;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+
+  .decorated-zone::after {
+    left: 10px;
+    bottom: 10px;
   }
   
+  .decorated-zone::before {
+    right: 10px;
+    top: 10px;
+  }
+
+  .main__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
+  .header__subtitle {
+    max-inline-size: 355px;
+  }
+
+  .main {
+    gap: 50px;
+    padding: 40px 10px;
+  }
+
+  .section-layout {
+    display: flex;
+    flex-direction: column;
+  }
 }
