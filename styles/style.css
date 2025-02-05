@@ -178,6 +178,7 @@ a:focus-visible {
   line-height: inherit;
   font-style: inherit;
   font-weight: bold;
+  max-inline-size: 315px;
 }
 
 .heading {
@@ -267,10 +268,6 @@ a:focus-visible {
 }
 
 @media (max-width: 1023px) {
-  .section__main-title {
-    max-inline-size: 236px;
-  }
-
   .section-what__listing {
     display: flex;
     flex-direction: column;
