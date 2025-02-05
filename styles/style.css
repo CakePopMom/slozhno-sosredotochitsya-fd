@@ -10,11 +10,6 @@
   font-size: 18px;
 }
 
-article,
-h4 {
-  font-weight: 400;
-}
-
 .header {
   display: grid;
   position: relative;
@@ -127,7 +122,7 @@ a:focus-visible {
 .main__title {
   color: var(--main-heading-color);
   font-family: inherit;
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-size: clamp(7.25rem, 0.5625rem + 14.4531vw, 9.8125rem); 
   text-shadow: 4px 4px 0 var(--accent-color);
   line-height: 82.5%;
   font-style: inherit;
@@ -156,6 +151,10 @@ a:focus-visible {
   background-color: var(--accent-color);
   color: var(--heading-color);
   font-size: 18px;
+}
+
+.section__article-title {
+  font-weight: 400;
 }
 
 .main {
@@ -271,7 +270,6 @@ a:focus-visible {
   .section-what__listing {
     display: flex;
     flex-direction: column;
-    gap: 20px;
   }
 
   .section__main-title {
@@ -285,12 +283,11 @@ a:focus-visible {
 
   .header__theme-menu-list {
     flex-direction: column;
-  }
+  } 
 
   .header__subtitle {
     max-inline-size: 364px;
   }
-
 }
 
 @media (max-width: 767px) {
@@ -299,6 +296,7 @@ a:focus-visible {
   }
 
   .images-layout {
+    display: flex;
     flex-direction: column;
     gap: 10px;
     margin-block-start: 5px;
@@ -328,10 +326,6 @@ a:focus-visible {
   .decorated-zone::before {
     right: 10px;
     top: 10px;
-  }
-
-  .main__title {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
   .header__subtitle {
